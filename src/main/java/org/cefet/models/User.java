@@ -8,15 +8,13 @@ public abstract class User extends EntityBase {
     private String name;
     private String lastName;
     private String email;
-    private Date date;
     private String password;
     private UserRole userRole;
 
-    public User(String name, String lastName, String email, Date date, String password, UserRole userRole) {
+    public User(String name, String lastName, String email, String password, UserRole userRole) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
-        this.date = date;
         this.password = password;
         this.userRole = userRole;
     }
@@ -45,14 +43,6 @@ public abstract class User extends EntityBase {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public String getPassword() {

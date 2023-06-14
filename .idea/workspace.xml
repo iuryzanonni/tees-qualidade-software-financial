@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccb918bf-121d-47af-a60f-ebfd026f2d36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/EntityBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/EntityBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,24 +42,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cefet.App" />
+  <component name="RunManager" selected="JUnit.InvestmentRepositoryTest">
+    <configuration name="All in financial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvestmentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
         <pattern>
@@ -66,13 +64,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.GroupRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvestmentRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupRepositoryTest.testDeleteGroup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvestmentRepositoryTest.shouldDeleteInvestment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
         <pattern>
@@ -81,14 +79,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.GroupRepositoryTest" />
-      <option name="METHOD_NAME" value="testDeleteGroup" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvestmentRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldDeleteInvestment" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupRepositoryTest.testSaveGroup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
         <pattern>
@@ -97,19 +95,34 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.GroupRepositoryTest" />
-      <option name="METHOD_NAME" value="testSaveGroup" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvoiceRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.GroupRepositoryTest" />
-        <item itemvalue="JUnit.GroupRepositoryTest.testDeleteGroup" />
-        <item itemvalue="JUnit.GroupRepositoryTest.testSaveGroup" />
+        <item itemvalue="JUnit.InvestmentRepositoryTest" />
+        <item itemvalue="JUnit.InvestmentRepositoryTest.shouldDeleteInvestment" />
+        <item itemvalue="JUnit.All in financial" />
+        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -134,16 +147,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/cefet/App.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

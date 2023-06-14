@@ -4,12 +4,10 @@ import java.util.Date;
 
 public class Invoice extends EntityBase {
     private String name;
-    private Date createDate;
     private Date dueDate;
 
-    public Invoice(String name, Date createDate, Date dueDate) {
+    public Invoice(String name, Date dueDate) {
         this.name = name;
-        this.createDate = createDate;
         this.dueDate = dueDate;
     }
 
@@ -21,14 +19,6 @@ public class Invoice extends EntityBase {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
     }
 
     public Date getDueDate() {

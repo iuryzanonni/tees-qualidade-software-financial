@@ -10,9 +10,9 @@ public class Administrator extends User{
 
     private List<Group> groups;
 
-    public Administrator(String name, String lastName, String email, Date date, String password, UserRole userRole,
+    public Administrator(String name, String lastName, String email, String password, UserRole userRole,
                          List<Group> groups) {
-        super(name, lastName, email, date, password, userRole);
+        super(name, lastName, email, password, userRole);
         this.groups = groups;
     }
 
