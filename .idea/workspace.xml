@@ -6,15 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ccb918bf-121d-47af-a60f-ebfd026f2d36" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/GroupRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/IRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvestmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvestmentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvoiceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/GroupRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/GroupRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvestmentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvestmentRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvoiceRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/UserRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/UserRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,62 +48,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.All in financial">
-    <configuration name="All in financial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GroupRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.GroupRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvestmentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvestmentRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvestmentRepositoryTest.shouldDeleteInvestment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvestmentRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldDeleteInvestment" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="UserRepositoryTest.shouldFindUserByEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
         <pattern>
@@ -112,18 +59,82 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.cefet.repositories" />
       <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="shouldFindUserByEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.services" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.services.UserServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.shouldLoginUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.services" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="shouldLoginUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.shouldNotLoginUserWhenDontFindUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.services" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotLoginUserWhenDontFindUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.shouldNotLoginUserWithWrongPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.services" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="shouldNotLoginUserWithWrongPassword" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in financial" />
-        <item itemvalue="JUnit.GroupRepositoryTest" />
-        <item itemvalue="JUnit.InvestmentRepositoryTest" />
-        <item itemvalue="JUnit.InvestmentRepositoryTest.shouldDeleteInvestment" />
-        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.shouldNotLoginUserWithWrongPassword" />
+        <item itemvalue="JUnit.UserServiceTest.shouldLoginUser" />
+        <item itemvalue="JUnit.UserServiceTest.shouldNotLoginUserWhenDontFindUser" />
+        <item itemvalue="JUnit.UserRepositoryTest.shouldFindUserByEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -148,5 +159,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/cefet/repositories/UserRepositoryTest.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

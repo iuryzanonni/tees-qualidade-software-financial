@@ -6,19 +6,19 @@ import org.junit.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class InvoiceRepositoryTest {
-    private Map<Integer, Invoice> invoiceDatabase;
+    private Set<Invoice> invoiceDatabase;
     private InvoiceRepository repository;
 
     @Before
     public void setUp() {
-        this.invoiceDatabase = new HashMap<>();
+        this.invoiceDatabase = new HashSet<>();
         this.repository = new InvoiceRepository(this.invoiceDatabase);
     }
 

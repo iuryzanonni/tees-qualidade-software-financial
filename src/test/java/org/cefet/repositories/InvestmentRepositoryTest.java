@@ -7,18 +7,18 @@ import org.cefet.models.Stock;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
 public class InvestmentRepositoryTest {
-    private Map<Integer, Investment> investmentDatabase;
+    private Set<Investment> investmentDatabase;
     private InvestmentRepository repository;
 
     @Before
     public void setUp() {
-        this.investmentDatabase = new HashMap<>();
+        this.investmentDatabase = new HashSet<>();
         this.repository = new InvestmentRepository(investmentDatabase);
     }
 

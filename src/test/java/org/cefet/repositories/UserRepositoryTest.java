@@ -8,17 +8,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
 public class UserRepositoryTest {
-    private Map<Integer, User> userDatabase;
+    private Set<User> userDatabase;
     private UserRepository repository;
 
     @Before
     public void setUp() {
-        this.userDatabase = new HashMap<>();
+        this.userDatabase = new HashSet<>();
         this.repository = new UserRepository(this.userDatabase);
     }
 
@@ -73,6 +75,19 @@ public class UserRepositoryTest {
         repository.delete(administrator);
 
         assertEquals(1, userDatabase.size());
+    }
+
+    @Test
+    public void shouldFindUserByEmail() {
+        Member member = createMember();
+        Administrator administrator = createAdministrator();
+
+        repository.save(member);
+        repository.save(administrator);
+
+        User user = repository.findUserByEmail(administrator.getEmail());
+
+        assertEquals(administrator, user);
     }
 
     private Member createMember() {
