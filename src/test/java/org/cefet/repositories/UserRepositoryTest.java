@@ -18,14 +18,14 @@ public class UserRepositoryTest {
 
     @Before
     public void setUp() {
-        this.repository = new UserRepository();
         this.userDatabase = new HashMap<>();
+        this.repository = new UserRepository(this.userDatabase);
     }
 
     @Test
     public void shouldSaveMember() {
         Member member = createMember();
-        repository.save(member, userDatabase);
+        repository.save(member);
 
         assertEquals(1, userDatabase.size());
     }
@@ -33,7 +33,7 @@ public class UserRepositoryTest {
     @Test
     public void shouldSaveAdministrator() {
         Administrator administrator = createAdministrator();
-        repository.save(administrator, userDatabase);
+        repository.save(administrator);
 
         assertEquals(1, userDatabase.size());
     }
@@ -43,8 +43,8 @@ public class UserRepositoryTest {
         Member member = createMember();
         Administrator administrator = createAdministrator();
 
-        repository.save(member, userDatabase);
-        repository.save(administrator, userDatabase);
+        repository.save(member);
+        repository.save(administrator);
 
         assertEquals(2, userDatabase.size());
     }
@@ -54,10 +54,10 @@ public class UserRepositoryTest {
         Member member = createMember();
         Administrator administrator = createAdministrator();
 
-        repository.save(member, userDatabase);
-        repository.save(administrator, userDatabase);
+        repository.save(member);
+        repository.save(administrator);
 
-        User user = repository.findById(2, userDatabase);
+        User user = repository.findById(2);
 
         assertEquals(administrator, user);
     }
@@ -67,10 +67,10 @@ public class UserRepositoryTest {
         Member member = createMember();
         Administrator administrator = createAdministrator();
 
-        repository.save(member, userDatabase);
-        repository.save(administrator, userDatabase);
+        repository.save(member);
+        repository.save(administrator);
 
-        repository.delete(administrator, userDatabase);
+        repository.delete(administrator);
 
         assertEquals(1, userDatabase.size());
     }

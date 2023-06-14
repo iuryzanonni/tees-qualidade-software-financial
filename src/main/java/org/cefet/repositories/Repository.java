@@ -8,32 +8,38 @@ import java.util.Map;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-public class Repository<T extends EntityBase> implements IRepository<T> {
+public abstract class Repository<T extends EntityBase> implements IRepository<T> {
+
+    private Map<Integer, T> database;
+
+    public Repository(Map<Integer, T> database) {
+        this.database = database;
+    }
 
     @Override
-    public T save(T t, Map<Integer, T> database) {
-        int id = getNextKey(database);
+    public T save(T t) {
+        int id = getNextKey();
         t.setId(id);
         t.setCreateDate(new Date());
-        database.put(id, t);
+        this.database.put(id, t);
         return t;
     }
 
     @Override
-    public void delete(T t, Map<Integer, T> database) {
-        database.remove(t.getId());
+    public void delete(T t) {
+        this.database.remove(t.getId());
     }
 
     @Override
-    public T findById(int id, Map<Integer, T> database) {
-        return database.get(id);
+    public T findById(int id) {
+        return this.database.get(id);
     }
 
-    private int getNextKey(Map<Integer, T> database) {
-        if (database.isEmpty()) {
+    private int getNextKey() {
+        if (this.database.isEmpty()) {
             return 1;
         }
-        SortedMap<Integer, T> mapSorted = new TreeMap<>(database);
+        SortedMap<Integer, T> mapSorted = new TreeMap<>(this.database);
         return mapSorted.lastKey() + 1;
     }
 }

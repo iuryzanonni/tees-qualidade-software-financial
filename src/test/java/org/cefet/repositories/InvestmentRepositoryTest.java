@@ -18,8 +18,8 @@ public class InvestmentRepositoryTest {
 
     @Before
     public void setUp() {
-        this.repository = new InvestmentRepository();
         this.investmentDatabase = new HashMap<>();
+        this.repository = new InvestmentRepository(investmentDatabase);
     }
 
     @Test
@@ -27,8 +27,8 @@ public class InvestmentRepositoryTest {
         Stock stock = createStock();
         FixedIncome fixedIncome = createFixedIncome();
 
-        repository.save(stock, investmentDatabase);
-        repository.save(fixedIncome, investmentDatabase);
+        repository.save(stock);
+        repository.save(fixedIncome);
 
         assertEquals(2, investmentDatabase.size());
     }
@@ -38,10 +38,10 @@ public class InvestmentRepositoryTest {
         Stock stock = createStock();
         FixedIncome fixedIncome = createFixedIncome();
 
-        repository.save(stock, investmentDatabase);
-        repository.save(fixedIncome, investmentDatabase);
+        repository.save(stock);
+        repository.save(fixedIncome);
 
-        repository.delete(stock, investmentDatabase);
+        repository.delete(stock);
 
         assertEquals(1, investmentDatabase.size());
     }
@@ -51,10 +51,10 @@ public class InvestmentRepositoryTest {
         Stock stock = createStock();
         FixedIncome fixedIncome = createFixedIncome();
 
-        repository.save(stock, investmentDatabase);
-        repository.save(fixedIncome, investmentDatabase);
+        repository.save(stock);
+        repository.save(fixedIncome);
 
-        Investment investment = repository.findById(2, investmentDatabase);
+        Investment investment = repository.findById(2);
 
         assertEquals(fixedIncome, investment);
     }

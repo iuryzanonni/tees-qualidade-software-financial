@@ -18,37 +18,37 @@ public class InvoiceRepositoryTest {
 
     @Before
     public void setUp() {
-        this.repository = new InvoiceRepository();
-        invoiceDatabase = new HashMap<>();
+        this.invoiceDatabase = new HashMap<>();
+        this.repository = new InvoiceRepository(this.invoiceDatabase);
     }
 
     @Test
     public void shouldSaveGroup() {
-        repository.save(createInvoice(), invoiceDatabase);
+        repository.save(createInvoice());
 
         assertEquals(1, invoiceDatabase.size());
     }
 
     @Test
     public void shouldDeleteGroup() {
-        Invoice invoice = repository.save(createInvoice(), invoiceDatabase);
-        repository.delete(invoice, invoiceDatabase);
+        Invoice invoice = repository.save(createInvoice());
+        repository.delete(invoice);
 
         assertEquals(0, invoiceDatabase.size());
     }
 
     @Test
     public void shouldFindGroupById() {
-        Invoice invoice = repository.save(createInvoice(), invoiceDatabase);
-        Invoice result = repository.findById(invoice.getId(), invoiceDatabase);
+        Invoice invoice = repository.save(createInvoice());
+        Invoice result = repository.findById(invoice.getId());
 
         assertEquals(invoice, result);
     }
 
     @Test
     public void shouldReturnNullWhenThereIsNotId() {
-        repository.save(createInvoice(), invoiceDatabase);
-        Invoice result = repository.findById(999, invoiceDatabase);
+        repository.save(createInvoice());
+        Invoice result = repository.findById(999);
 
         assertNull(result);
     }

@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccb918bf-121d-47af-a60f-ebfd026f2d36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/EntityBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/EntityBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/GroupRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/GroupRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/IRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvestmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvestmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvoiceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/GroupRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/GroupRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvestmentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvestmentRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +47,26 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.InvestmentRepositoryTest">
+  <component name="RunManager" selected="JUnit.All in financial">
     <configuration name="All in financial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.GroupRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,21 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvoiceRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
@@ -118,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in financial" />
+        <item itemvalue="JUnit.GroupRepositoryTest" />
         <item itemvalue="JUnit.InvestmentRepositoryTest" />
         <item itemvalue="JUnit.InvestmentRepositoryTest.shouldDeleteInvestment" />
-        <item itemvalue="JUnit.All in financial" />
         <item itemvalue="JUnit.UserRepositoryTest" />
-        <item itemvalue="JUnit.InvoiceRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

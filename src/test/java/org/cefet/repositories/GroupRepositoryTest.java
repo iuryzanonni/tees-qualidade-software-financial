@@ -12,43 +12,42 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class GroupRepositoryTest {
-
-    private Map<Integer, Group> groupDatabase;
     private GroupRepository repository;
+    private Map<Integer, Group> groupDatabase;
 
     @Before
     public void setUp() {
-        this.repository = new GroupRepository();
-        groupDatabase = new HashMap<>();
+        this.groupDatabase = new HashMap<>();
+        this.repository = new GroupRepository(groupDatabase);
     }
 
     @Test
     public void shouldSaveGroup() {
-        repository.save(createGroup(), groupDatabase);
+        repository.save(createGroup());
 
         assertEquals(1, groupDatabase.size());
     }
 
     @Test
     public void shouldDeleteGroup() {
-        Group group = repository.save(createGroup(), groupDatabase);
-        repository.delete(group, groupDatabase);
+        Group group = repository.save(createGroup());
+        repository.delete(group);
 
         assertEquals(0, groupDatabase.size());
     }
 
     @Test
     public void shouldFindGroupById() {
-        Group group = repository.save(createGroup(), groupDatabase);
-        Group result = repository.findById(group.getId(), groupDatabase);
+        Group group = repository.save(createGroup());
+        Group result = repository.findById(group.getId());
 
         assertEquals(group, result);
     }
 
     @Test
     public void shouldReturnNullWhenThereIsNotId() {
-        repository.save(createGroup(), groupDatabase);
-        Group result = repository.findById(999, groupDatabase);
+        repository.save(createGroup());
+        Group result = repository.findById(999);
 
         assertNull(result);
     }
