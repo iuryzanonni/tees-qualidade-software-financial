@@ -12,16 +12,17 @@ public abstract class User extends EntityBase {
     private String email;
     private String password;
     private UserRole userRole;
-
     private List<Investment> investments = new ArrayList<>();
+    private List<Invoice> invoices = new ArrayList<>();
 
-    public User(String name, String lastName, String email, String password, UserRole userRole, List<Investment> investments) {
+    public User(String name, String lastName, String email, String password, UserRole userRole, List<Investment> investments, List<Invoice> invoices) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.userRole = userRole;
         this.investments = investments;
+        this.invoices = invoices;
     }
 
     public User() {}
@@ -72,5 +73,13 @@ public abstract class User extends EntityBase {
 
     public void setInvestments(List<Investment> investments) {
         this.investments = investments;
+    }
+
+    public List<Invoice> getInvoices() {
+        return invoices;
+    }
+
+    public void setInvoices(List<Invoice> invoices) {
+        this.invoices = invoices;
     }
 }

@@ -7,6 +7,9 @@ import org.cefet.repositories.InvestmentRepository;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
@@ -16,6 +19,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class InvestmentServiceTest {
+
+    private final String COMPANY = "APPLE";
+    private final String TICKER = "AAPL";
+    private final LocalDate DATE_INVESTMENT = LocalDate.of(2023,06,16);
+    private final double VALUE_BUY = 123.45;
     private Set<Investment> database;
     private InvestmentRepository investmentRepository;
     private InvestmentService investmentService;
@@ -28,13 +36,21 @@ public class InvestmentServiceTest {
     }
 
     @Test
-    public void shouldAddInvestment() {
+    public void shouldAddInvestmentToUser() {
         User user = createMember();
         Stock stock = createStock();
 
-        this.investmentService.addInvestment(stock, user);
+        this.investmentService.addInvestmentToUser(stock, user);
 
         assertTrue(user.getInvestments().contains(stock));
+    }
+
+    @Test
+    public void shouldCreateStock() {
+        Investment investment = this.investmentService.createStock(COMPANY, TICKER, DATE_INVESTMENT,
+                VALUE_BUY, null);
+
+        assertTrue(database.contains(investment));
     }
 
     @Test
@@ -90,7 +106,7 @@ public class InvestmentServiceTest {
     private FixedIncome createFixedIncome() {
         FixedIncome fixedIncome = new FixedIncome();
         fixedIncome.setType(FixedIncomeType.LCI);
-        fixedIncome.setValueBuy(999);
+        fixedIncome.setValueBuy(VALUE_BUY);
 
         return fixedIncome;
     }

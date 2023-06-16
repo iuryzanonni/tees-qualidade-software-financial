@@ -71,7 +71,7 @@ public class InvestmentRepositoryTest {
     private FixedIncome createFixedIncome() {
         FixedIncome fixedIncome = new FixedIncome();
         fixedIncome.setType(FixedIncomeType.LCI);
-        fixedIncome.setValueBuy(999);
+        fixedIncome.setValueBuy(999.99);
 
         return fixedIncome;
     }

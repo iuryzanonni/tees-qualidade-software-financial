@@ -2,12 +2,12 @@ package org.cefet.models;
 
 import org.cefet.enums.FixedIncomeType;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class FixedIncome extends Investment{
     private FixedIncomeType type;
 
-    public FixedIncome(Date dateInvestment, double valueBuy, double valueSale, FixedIncomeType type) {
+    public FixedIncome(LocalDate dateInvestment, double valueBuy, double valueSale, FixedIncomeType type) {
         super(dateInvestment, valueBuy, valueSale);
         this.type = type;
     }

@@ -4,8 +4,8 @@ import org.cefet.models.Invoice;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -56,14 +56,8 @@ public class InvoiceRepositoryTest {
     private Invoice createInvoice() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Invoice invoice = new Invoice();
-
-        try {
-            invoice.setCreateDate(formatter.parse("2023-06-13"));
-            invoice.setName("Fatura Teste");
-            invoice.setDueDate(formatter.parse("2023-06-30"));
-        } catch (ParseException e) {
-            System.out.println("Formato de data invalido.");
-        }
+        invoice.setName("Fatura Teste");
+        invoice.setDueDate(LocalDate.of(2023, 06, 30));
 
         return invoice;
     }

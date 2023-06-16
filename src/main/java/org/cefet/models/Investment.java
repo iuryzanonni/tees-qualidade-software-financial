@@ -1,13 +1,14 @@
 package org.cefet.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public abstract class Investment extends EntityBase {
-    private Date dateInvestment;
-    private double valueBuy;
-    private double valueSale;
+    private LocalDate dateInvestment;
+    private Double valueBuy;
+    private Double valueSale;
 
-    public Investment(Date dateInvestment, double valueBuy, double valueSale) {
+    public Investment(LocalDate dateInvestment, Double valueBuy, Double valueSale) {
         this.dateInvestment = dateInvestment;
         this.valueBuy = valueBuy;
         this.valueSale = valueSale;
@@ -15,27 +16,27 @@ public abstract class Investment extends EntityBase {
 
     public Investment() {}
 
-    public Date getDateInvestment() {
+    public LocalDate getDateInvestment() {
         return dateInvestment;
     }
 
-    public void setDateInvestment(Date dateInvestment) {
+    public void setDateInvestment(LocalDate dateInvestment) {
         this.dateInvestment = dateInvestment;
     }
 
-    public double getValueBuy() {
+    public Double getValueBuy() {
         return valueBuy;
     }
 
-    public void setValueBuy(double valueBuy) {
+    public void setValueBuy(Double valueBuy) {
         this.valueBuy = valueBuy;
     }
 
-    public double getValueSale() {
+    public Double getValueSale() {
         return valueSale;
     }
 
-    public void setValueSale(double valueSale) {
+    public void setValueSale(Double valueSale) {
         this.valueSale = valueSale;
     }
 }

@@ -7,11 +7,17 @@
     <list default="true" id="ccb918bf-121d-47af-a60f-ebfd026f2d36" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/FixedIncome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/FixedIncome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Investment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Investment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/services/InvestmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/services/InvestmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvestmentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvestmentRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/repositories/InvoiceRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/services/InvestmentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/services/InvestmentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,53 +60,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvestmentServiceTest.shouldCreateStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.cefet.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.services" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.services.GroupServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvestmentServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.services.*" />
+          <option name="PATTERN" value="org.cefet.services.payment.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.cefet.services" />
       <option name="MAIN_CLASS_NAME" value="org.cefet.services.InvestmentServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvestmentServiceTest.shouldAddInvestment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.services" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.services.InvestmentServiceTest" />
-      <option name="METHOD_NAME" value="shouldAddInvestment" />
+      <option name="METHOD_NAME" value="shouldCreateStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvestmentServiceTest.shouldAddInvestmentToAllMembers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.repositories" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.repositories.InvoiceRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvoiceServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.services.payment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.cefet.services" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.services.InvoiceServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvoiceServiceTest.shouldPayInvoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
         <pattern>
@@ -108,8 +115,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.cefet.services" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.services.InvestmentServiceTest" />
-      <option name="METHOD_NAME" value="shouldAddInvestmentToAllMembers" />
+      <option name="MAIN_CLASS_NAME" value="org.cefet.services.InvoiceServiceTest" />
+      <option name="METHOD_NAME" value="shouldPayInvoice" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,10 +125,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in financial" />
-        <item itemvalue="JUnit.InvestmentServiceTest" />
-        <item itemvalue="JUnit.InvestmentServiceTest.shouldAddInvestmentToAllMembers" />
-        <item itemvalue="JUnit.InvestmentServiceTest.shouldAddInvestment" />
-        <item itemvalue="JUnit.GroupServiceTest" />
+        <item itemvalue="JUnit.InvoiceServiceTest" />
+        <item itemvalue="JUnit.InvoiceServiceTest.shouldPayInvoice" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest" />
+        <item itemvalue="JUnit.InvestmentServiceTest.shouldCreateStock" />
       </list>
     </recent_temporary>
   </component>

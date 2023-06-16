@@ -1,14 +1,20 @@
 package org.cefet.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Invoice extends EntityBase {
     private String name;
-    private Date dueDate;
+    private LocalDate dueDate;
+    private LocalDate paymentDate;
 
-    public Invoice(String name, Date dueDate) {
+    private Double value;
+
+    public Invoice(String name, LocalDate dueDate, LocalDate paymentDate, Double value) {
         this.name = name;
         this.dueDate = dueDate;
+        this.paymentDate = paymentDate;
+        this.value = value;
     }
 
     public Invoice() {}
@@ -21,11 +27,27 @@ public class Invoice extends EntityBase {
         this.name = name;
     }
 
-    public Date getDueDate() {
+    public Double getValue() {
+        return value;
+    }
+
+    public void setValue(Double value) {
+        this.value = value;
+    }
+
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
+    }
+
+    public LocalDate getPaymentDate() {
+        return paymentDate;
+    }
+
+    public void setPaymentDate(LocalDate paymentDate) {
+        this.paymentDate = paymentDate;
     }
 }

@@ -12,8 +12,8 @@ public class Administrator extends User{
     private List<Group> groups = new ArrayList<>();
 
     public Administrator(String name, String lastName, String email, String password, UserRole userRole,
-                         List<Investment> investments, List<Group> groups) {
-        super(name, lastName, email, password, userRole, investments);
+                         List<Investment> investments, List<Invoice> invoices, List<Group> groups) {
+        super(name, lastName, email, password, userRole, investments, invoices);
         this.groups = groups;
     }
 

@@ -1,10 +1,10 @@
 package org.cefet.services;
 
-import org.cefet.models.Administrator;
-import org.cefet.models.Group;
-import org.cefet.models.Investment;
-import org.cefet.models.User;
+import org.cefet.models.*;
 import org.cefet.repositories.InvestmentRepository;
+
+import java.time.LocalDate;
+import java.util.Date;
 
 public class InvestmentService {
     private final InvestmentRepository investmentRepository;
@@ -13,9 +13,20 @@ public class InvestmentService {
         this.investmentRepository = investmentRepository;
     }
 
-    public void addInvestment(Investment investment, User user) {
+    public void addInvestmentToUser(Investment investment, User user) {
         user.getInvestments().add(investment);
         System.out.println("Investimento inserido com sucesso.");
+    }
+
+    public Investment createStock(String company, String ticker, LocalDate dateInvestment, double valueBuy, Double valueSale) {
+        Stock stock = new Stock();
+        stock.setCompany(company);
+        stock.setTicker(ticker);
+        stock.setDateInvestment(dateInvestment);
+        stock.setValueBuy(valueBuy);
+        stock.setValueSale(valueSale);
+
+        return investmentRepository.save(stock);
     }
 
     public void removeInvestment(Investment investment, User user) {

@@ -1,12 +1,12 @@
 package org.cefet.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Stock extends Investment{
     private String company;
     private String ticker;
 
-    public Stock(Date dateInvestment, double valueBuy, double valueSale, String company, String ticker) {
+    public Stock(LocalDate dateInvestment, double valueBuy, double valueSale, String company, String ticker) {
         super(dateInvestment, valueBuy, valueSale);
         this.company = company;
         this.ticker = ticker;

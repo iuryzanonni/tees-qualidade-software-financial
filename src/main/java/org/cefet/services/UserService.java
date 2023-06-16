@@ -15,7 +15,7 @@ public class UserService {
     }
 
     public User createUser(String name, String lastName, String email, String password, UserRole userRole) {
-        Member member = new Member(name, lastName, email, password, UserRole.BASIC, new ArrayList<>());
+        Member member = new Member(name, lastName, email, password, UserRole.BASIC, new ArrayList<>(), new ArrayList<>());
 
         try {
             this.userRepository.save(member);
