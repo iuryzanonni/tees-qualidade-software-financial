@@ -2,7 +2,9 @@ package org.cefet.models;
 
 import org.cefet.enums.UserRole;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public abstract class User extends EntityBase {
     private String name;
@@ -11,12 +13,15 @@ public abstract class User extends EntityBase {
     private String password;
     private UserRole userRole;
 
-    public User(String name, String lastName, String email, String password, UserRole userRole) {
+    private List<Investment> investments = new ArrayList<>();
+
+    public User(String name, String lastName, String email, String password, UserRole userRole, List<Investment> investments) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.userRole = userRole;
+        this.investments = investments;
     }
 
     public User() {}
@@ -59,5 +64,13 @@ public abstract class User extends EntityBase {
 
     public void setUserRole(UserRole userRole) {
         this.userRole = userRole;
+    }
+
+    public List<Investment> getInvestments() {
+        return investments;
+    }
+
+    public void setInvestments(List<Investment> investments) {
+        this.investments = investments;
     }
 }

@@ -3,16 +3,17 @@ package org.cefet.models;
 
 import org.cefet.enums.UserRole;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Administrator extends User{
 
-    private List<Group> groups;
+    private List<Group> groups = new ArrayList<>();
 
     public Administrator(String name, String lastName, String email, String password, UserRole userRole,
-                         List<Group> groups) {
-        super(name, lastName, email, password, userRole);
+                         List<Investment> investments, List<Group> groups) {
+        super(name, lastName, email, password, userRole, investments);
         this.groups = groups;
     }
 

@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Stock extends Investment{
     private String company;
-
     private String ticker;
 
     public Stock(Date dateInvestment, double valueBuy, double valueSale, String company, String ticker) {

@@ -5,6 +5,8 @@ import org.cefet.models.Member;
 import org.cefet.models.User;
 import org.cefet.repositories.UserRepository;
 
+import java.util.ArrayList;
+
 public class UserService {
     private final UserRepository userRepository;
 
@@ -13,7 +15,7 @@ public class UserService {
     }
 
     public User createUser(String name, String lastName, String email, String password, UserRole userRole) {
-        Member member = new Member(name, lastName, email, password, UserRole.BASIC);
+        Member member = new Member(name, lastName, email, password, UserRole.BASIC, new ArrayList<>());
 
         try {
             this.userRepository.save(member);
