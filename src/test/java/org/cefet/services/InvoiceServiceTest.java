@@ -1,6 +1,7 @@
 package org.cefet.services;
 
 import org.cefet.enums.UserRole;
+import org.cefet.models.Group;
 import org.cefet.models.Invoice;
 import org.cefet.models.Member;
 import org.cefet.models.User;
@@ -15,8 +16,7 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class InvoiceServiceTest {
 
@@ -58,6 +58,23 @@ public class InvoiceServiceTest {
         assertNotNull(invoice.getPaymentDate());
     }
 
+    @Test
+    public void shouldAddInvoiceToGroup() {
+        Invoice invoice = this.invoiceService.createInvoice(NAME, DUE_DATE, null, VALUE);
+        Group group = createGroup();
+
+        for(int i = 0; i<=5; i++) {
+            group.getUsers().add(createMember());
+        }
+
+        this.invoiceService.addInvoiceToGroup(invoice, group);
+
+        for (User user: group.getUsers()) {
+            assertTrue(user.getInvoices().contains(invoice));
+            assertEquals(1, user.getInvoices().size());
+        }
+    }
+
     private Member createMember() {
         Member member = new Member();
         member.setName("Alvo");
@@ -68,5 +85,12 @@ public class InvoiceServiceTest {
 
         this.userRepository.save(member);
         return member;
+    }
+
+    private Group createGroup() {
+        Group group = new Group();
+        group.setName("Group Test");
+
+        return  group;
     }
 }

@@ -1,5 +1,6 @@
 package org.cefet.services;
 
+import org.cefet.models.Group;
 import org.cefet.models.Invoice;
 import org.cefet.models.User;
 import org.cefet.repositories.InvoiceRepository;
@@ -40,5 +41,12 @@ public class InvoiceService {
         }
 
         invoice.setPaymentDate(LocalDate.now());
+    }
+
+    public void addInvoiceToGroup(Invoice invoice, Group group) {
+        group.getUsers().forEach(user -> {
+            user.getInvoices().add(invoice);
+        });
+
     }
 }
