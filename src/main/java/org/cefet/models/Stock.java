@@ -8,8 +8,8 @@ public class Stock extends Investment {
 
     private int amount;
 
-    public Stock(LocalDate dateInvestment, double valueBuy, double valueSale, String company, String ticker, int amount) {
-        super(dateInvestment, valueBuy, valueSale);
+    public Stock(LocalDate dateInvestment, Double valueBuy, Double valueSale, User user, String company, String ticker, int amount) {
+        super(dateInvestment, valueBuy, valueSale, user);
         this.company = company;
         this.ticker = ticker;
         this.amount = amount;

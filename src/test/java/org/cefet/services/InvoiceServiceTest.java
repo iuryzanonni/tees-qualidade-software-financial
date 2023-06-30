@@ -38,29 +38,29 @@ public class InvoiceServiceTest {
         this.invoiceRepository = new InvoiceRepository(this.invoicesDatabase);
         this.userRepository = new UserRepository(this.usersDatabase);
         this.paymentService = new CardPaymentService();
-        this.invoiceService = new InvoiceService(this.invoiceRepository, this.userRepository, this.paymentService);
+        this.invoiceService = new InvoiceService(this.invoiceRepository, this.userRepository);
     }
 
     @Test
     public void shouldCreateInvoice() {
-        Invoice invoice = this.invoiceService.createInvoice(NAME, DUE_DATE, null, VALUE);
+        Invoice invoice = this.invoiceService.createInvoice(NAME, DUE_DATE, null, VALUE, createMember());
 
         assertTrue(this.invoicesDatabase.contains(invoice));
     }
 
     @Test
     public void shouldPayInvoice() {
-        Invoice invoice = this.invoiceService.createInvoice(NAME, DUE_DATE, null, VALUE);
         Member member = createMember();
+        Invoice invoice = this.invoiceService.createInvoice(NAME, DUE_DATE, null, VALUE, member);
 
-        this.invoiceService.payInvoice(invoice.getId(), member.getEmail());
+        this.invoiceService.payInvoice(invoice.getId(), member.getEmail(), paymentService);
 
         assertNotNull(invoice.getPaymentDate());
     }
 
     @Test
     public void shouldAddInvoiceToGroup() {
-        Invoice invoice = this.invoiceService.createInvoice(NAME, DUE_DATE, null, VALUE);
+        Invoice invoice = new Invoice();
         Group group = createGroup();
 
         for(int i = 0; i<=5; i++) {

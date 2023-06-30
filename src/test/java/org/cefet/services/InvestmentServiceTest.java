@@ -4,12 +4,11 @@ import org.cefet.enums.FixedIncomeType;
 import org.cefet.enums.UserRole;
 import org.cefet.models.*;
 import org.cefet.repositories.InvestmentRepository;
+import org.cefet.repositories.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.text.DateFormat;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
@@ -24,15 +23,19 @@ public class InvestmentServiceTest {
     private final String TICKER = "AAPL";
     private final LocalDate DATE_INVESTMENT = LocalDate.of(2023,06,16);
     private final double VALUE_BUY = 123.45;
-    private Set<Investment> database;
+    private Set<Investment> investmentDatabase;
+    private Set<User> userDatabase;
     private InvestmentRepository investmentRepository;
+    private UserRepository userRepository;
     private InvestmentService investmentService;
 
     @Before
     public void setUp() {
-        this.database = new HashSet<>();
-        this.investmentRepository = new InvestmentRepository(this.database);
-        this.investmentService = new InvestmentService(this.investmentRepository);
+        this.investmentDatabase = new HashSet<>();
+        this.userDatabase = new HashSet<>();
+        this.investmentRepository = new InvestmentRepository(this.investmentDatabase);
+        this.userRepository = new UserRepository(this.userDatabase);
+        this.investmentService = new InvestmentService(this.investmentRepository, this.userRepository);
     }
 
     @Test
@@ -47,10 +50,11 @@ public class InvestmentServiceTest {
 
     @Test
     public void shouldCreateStock() {
+        User user = createMember();
         Investment investment = this.investmentService.createStock(COMPANY, TICKER, DATE_INVESTMENT,
-                VALUE_BUY, null);
+                VALUE_BUY, null, 50, user);
 
-        assertTrue(database.contains(investment));
+        assertTrue(investmentDatabase.contains(investment));
     }
 
     @Test

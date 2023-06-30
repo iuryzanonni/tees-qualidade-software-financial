@@ -7,11 +7,13 @@ public abstract class Investment extends EntityBase {
     private LocalDate dateInvestment;
     private Double valueBuy;
     private Double valueSale;
+    private User user;
 
-    public Investment(LocalDate dateInvestment, Double valueBuy, Double valueSale) {
+    public Investment(LocalDate dateInvestment, Double valueBuy, Double valueSale, User user) {
         this.dateInvestment = dateInvestment;
         this.valueBuy = valueBuy;
         this.valueSale = valueSale;
+        this.user = user;
     }
 
     public Investment() {}
@@ -38,5 +40,13 @@ public abstract class Investment extends EntityBase {
 
     public void setValueSale(Double valueSale) {
         this.valueSale = valueSale;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

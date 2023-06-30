@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="ccb918bf-121d-47af-a60f-ebfd026f2d36" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/FixedIncome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/FixedIncome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Investment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Investment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/models/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvestmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvestmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/repositories/InvoiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/services/InvestmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/services/InvestmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/services/InvoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/services/InvoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/cefet/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/cefet/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/services/InvestmentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/services/InvestmentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/cefet/services/InvoiceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/cefet/services/InvoiceServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <branch-grouping />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,7 +52,20 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ReportGeneratorTest.shouldGenerateReport">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.cefet.App" />
+      <module name="financial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.cefet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in financial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,22 +105,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceServiceTest.shouldPayInvoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="financial" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cefet.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.cefet.services" />
-      <option name="MAIN_CLASS_NAME" value="org.cefet.services.InvoiceServiceTest" />
-      <option name="METHOD_NAME" value="shouldPayInvoice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReportGeneratorTest.shouldGenerateReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="financial" />
       <extension name="coverage">
@@ -116,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.All in financial" />
         <item itemvalue="JUnit.ReportGeneratorTest.shouldGenerateReport" />
         <item itemvalue="JUnit.InvoiceServiceTest" />
         <item itemvalue="JUnit.InvoiceServiceTest.shouldAddInvoiceToGroup" />
-        <item itemvalue="JUnit.All in financial" />
-        <item itemvalue="JUnit.InvoiceServiceTest.shouldPayInvoice" />
       </list>
     </recent_temporary>
   </component>
@@ -141,12 +148,17 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>

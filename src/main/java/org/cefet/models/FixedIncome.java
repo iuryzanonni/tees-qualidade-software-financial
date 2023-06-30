@@ -7,8 +7,8 @@ import java.time.LocalDate;
 public class FixedIncome extends Investment{
     private FixedIncomeType type;
 
-    public FixedIncome(LocalDate dateInvestment, double valueBuy, double valueSale, FixedIncomeType type) {
-        super(dateInvestment, valueBuy, valueSale);
+    public FixedIncome(LocalDate dateInvestment, Double valueBuy, Double valueSale, User user, FixedIncomeType type) {
+        super(dateInvestment, valueBuy, valueSale, user);
         this.type = type;
     }
 

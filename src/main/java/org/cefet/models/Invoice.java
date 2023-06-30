@@ -7,14 +7,15 @@ public class Invoice extends EntityBase {
     private String name;
     private LocalDate dueDate;
     private LocalDate paymentDate;
-
     private Double value;
+    private User user;
 
-    public Invoice(String name, LocalDate dueDate, LocalDate paymentDate, Double value) {
+    public Invoice(String name, LocalDate dueDate, LocalDate paymentDate, Double value, User user) {
         this.name = name;
         this.dueDate = dueDate;
         this.paymentDate = paymentDate;
         this.value = value;
+        this.user = user;
     }
 
     public Invoice() {}
@@ -49,5 +50,13 @@ public class Invoice extends EntityBase {
 
     public void setPaymentDate(LocalDate paymentDate) {
         this.paymentDate = paymentDate;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
